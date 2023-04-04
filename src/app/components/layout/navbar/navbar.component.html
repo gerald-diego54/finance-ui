@@ -1,0 +1,87 @@
+<div
+    class="w-full flex justify-between py-0 mb-32 md:right-0 m-auto z-20 min-w-[280px] shadow-md"
+    *ngIf="disableMountainShape; else dashboardNavs"
+>
+    <div class="flex flex-row gap-2 h-fit z-10 my-auto md:mx-3">
+        <object type="image/svg+xml" width="30" height="30" data="/assets/icons/monitoring-blue.svg"></object>
+        <p class="my-auto font-medium text-bice-blue text-xl">Finance Chrome</p>
+    </div>
+    <div class="z-10 hidden md:inline-block my-2 md:mx-3" *ngIf="disableMountainShape">
+        <button class="text-bice-blue rounded-full border border-bice-blue px-3 py-1.5 text-sm mx-2">Sign in</button>
+        <button class="text-white rounded-full bg-bice-blue px-3 text-sm py-1.5 mx-2">Sign up</button>
+    </div>
+    <div *ngIf="mobile" class="my-3">
+        <button mat-icon-button>
+            <mat-icon class="text-bice-blue">menu</mat-icon>
+        </button>
+    </div>
+</div>
+<ng-template #dashboardNavs>
+    <div class="w-full flex justify-between p-0 md:relative h-[8%] m-0 z-20 min-w-[280px] bg-white shadow-md">
+        <div class="md:justify-start justify-between w-full flex">
+            <div x-data="{ open: false }" class="relative my-auto hidden md:inline">
+                <button
+                    (click)="open = !open"
+                    class="py-3 rounded md:inline-flex hidden items-center hover:bg-sky-50 px-2.5"
+                >
+                    <img src="/assets/icons/menu.svg" width="20" class="my-auto px-0" alt="" />
+                </button>
+                <div
+                    (click)="open = false"
+                    [class.hidden]="!open"
+                    class="absolute left-0 mt-2 w-60 bg-white rounded-md overflow-hidden shadow-lg"
+                >
+                    <a
+                        href="#"
+                        class="block px-4 py-2 text-sm text-bice-blue hover:bg-sky-50 ml-5 border-l-4 bg-alice-blue border-bice-blue"
+                        >Budget App</a
+                    >
+                    <a href="#" class="block px-4 py-2 text-sm text-bice-blue hover:bg-sky-50 ml-5"
+                        >Project Management App</a
+                    >
+                    <a href="#" class="block px-4 py-2 text-sm text-bice-blue hover:bg-sky-50 ml-5">Note App</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-bice-blue hover:bg-sky-50 ml-5">Calculator</a>
+                </div>
+            </div>
+            <div class="flex flex-row gap-2 h-fit p-0 z-10 my-auto md:mx-3 items-center">
+                <object type="image/svg+xml" width="30" height="30" data="/assets/icons/monitoring-blue.svg"></object>
+                <p class="font-medium text-bice-blue text-xl pt-4">Finance Chrome</p>
+            </div>
+            <div class="z-10 hidden md:inline-block my-2 md:mx-3" *ngIf="disableMountainShape">
+                <button class="text-bice-blue rounded-full bg-white px-3 py-1.5 text-sm mx-2">Sign in</button>
+                <button class="text-white rounded-full border border-white px-3 text-sm py-1.5 mx-2">Sign up</button>
+            </div>
+            <div class="my-3 md:my-0 flex flex-row gap-4">
+                <button *ngIf="mobile" mat-icon-button>
+                    <mat-icon class="text-bice-blue">menu</mat-icon>
+                </button>
+                <button
+                    class="py-4 md:inline-flex items-center hover:bg-sky-50 hidden px-2.5 focus:border-b-4 focus:border-b-bice-blue"
+                >
+                    <span class="text-bice-blue text-sm font-normal my-auto">Reports</span>
+                </button>
+                <button
+                    class="py-4 md:inline-flex items-center hover:bg-sky-50 hidden px-2.5 focus:border-b-4 focus:border-b-bice-blue"
+                >
+                    <span class="text-bice-blue text-sm font-normal my-auto">Benefits</span>
+                </button>
+                <button
+                    class="py-4 md:inline-flex items-center hover:bg-sky-50 hidden px-2.5 focus:border-b-4 focus:border-b-bice-blue"
+                >
+                    <span class="text-bice-blue text-sm font-normal my-auto">Expenses</span>
+                </button>
+                <button *ngIf="!mobile" class="bg-bice-blue my-2 rounded-md px-3.5">
+                    <span class="text-white text-sm font-thin">Create</span>
+                </button>
+            </div>
+        </div>
+        <div class="my-auto hidden md:inline-flex gap-3 flex-row mx-2">
+            <button mat-icon-button>
+                <mat-icon class="text-bice-blue" matBadge="99+" matBadgeSize="medium" matBadgeColor="warn"
+                    >notifications</mat-icon
+                >
+            </button>
+            <button mat-mini-fab extended style="background-color: green">GD</button>
+        </div>
+    </div>
+</ng-template>

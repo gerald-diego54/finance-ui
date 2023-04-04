@@ -1,0 +1,52 @@
+<div
+    class="bg-slate-50 w-60 relative h-full left-0 transition-all duration-300 hidden md:inline-flex shadow-lg border-slate-200 border"
+    [ngClass]="{ 'w-9': !sidebarOpen }"
+>
+    <div [ngClass]="{ hidden: !sidebarOpen }" class="flex flex-col transition-all duration-1000 absolute top-14">
+        <div class="text-bice-blue text-sm font-semibold ml-5">Annually</div>
+        <button
+            class="text-bice-blue mt-3 text-left text-sm ml-8 focus:border-l-2 pl-1.5 mr-8 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue py-2"
+        >
+            Summary
+        </button>
+        <button
+            class="text-bice-blue mt-1 text-left text-sm ml-8 focus:border-l-2 pl-1.5 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue mr-8 py-1"
+        >
+            Expenses
+        </button>
+        <button
+            class="text-bice-blue mt-1 text-left text-sm ml-8 focus:border-l-2 pl-1.5 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue mr-8 py-1"
+        >
+            Income
+        </button>
+        <div class="text-bice-blue text-sm font-semibold mt-10 ml-5">Monthly</div>
+        <button
+            class="text-bice-blue mt-1 text-left text-sm ml-8 focus:border-l-2 pl-1.5 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue mr-8 py-1"
+        >
+            Transactions
+        </button>
+        <button
+            class="text-bice-blue mt-1 text-left text-sm ml-8 focus:border-l-2 pl-1.5 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue mr-8 py-1"
+        >
+            Transactions
+        </button>
+        <button
+            class="text-bice-blue text-sm mt-10 ml-5 text-left focus:border-l-2 pl-1.5 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue mr-8 py-1"
+        >
+            Configure Budget Guideline
+        </button>
+        <button
+            class="text-bice-blue text-sm mt-3 ml-5 text-left focus:border-l-2 pl-1.5 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue mr-8 py-1"
+        >
+            Configure Government Benefits (%)
+        </button>
+        <button
+            class="text-bice-blue text-sm mt-3 ml-5 text-left focus:border-l-2 pl-1.5 focus:border-bice-blue focus:bg-alice-blue hover:bg-alice-blue mr-8 py-1"
+        >
+            Calculator
+        </button>
+    </div>
+    <button (click)="toggleSidebar()" class="mt-24 bg-bice-blue rounded-full absolute right-[-15px] p-2">
+        <img [src]="!sidebarOpen ? '/assets/icons/chevron-right.svg' : '/assets/icons/close-icon.svg'" alt="" />
+    </button>
+</div>

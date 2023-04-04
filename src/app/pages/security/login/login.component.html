@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="w-full hidden absolute top-20 z-10 md:block">
+    <p class="text-3xl text-bice-blue text-center z-10 font-medium relative">Log In</p>
+    <p class="text-base my-2 text-bice-blue text-center z-10 font-normal relative">Keep track to your daily expenses</p>
+</div>
+<div class="w-full max-w-[1536px] mx-auto">
+    <div class="flex md:flex-row justify-center mx-0">
+        <div class="w-1/3 mt-9 hidden relative md:inline-block min-w-[470px]">
+            <img
+                src="/assets/laptop.png"
+                class="absolute top-0 right-0 min-w-[300px] max-w-[500px]"
+                width="1250"
+                alt=""
+            />
+            <img src="/assets/apple.png" class="absolute top-10 right-0 min-w-[120px]" width="150" alt="" />
+        </div>
+        <form class="md:px-10 z-10 mt-20 md:mt-0 mx-3 md:mx-0">
+            <div class="text-center font-medium text-2xl text-bice-blue md:block">Sign in</div>
+            <div class="text-justify text-sm my-2 text-bice-blue"></div>
+            <mat-form-field class="w-full">
+                <mat-label class="text-bice-blue">Email</mat-label>
+                <input class="text-sm" type="email" matInput />
+            </mat-form-field>
+            <mat-form-field class="w-full">
+                <mat-label class="text-bice-blue">Password</mat-label>
+                <input class="text-sm" type="password" matInput />
+            </mat-form-field>
+            <button class="bg-bice-blue text-white w-full rounded-md py-2 my-5">Log in</button>
+            <div class="text-center text-sm my-2 text-bice-blue">Forgot password?</div>
+            <div class="relative flex py-5 items-center">
+                <div class="flex-grow border-t border-gray-400"></div>
+                <span class="flex-shrink mx-4 text-gray-400 text-sm">OR</span>
+                <div class="flex-grow border-t border-gray-400"></div>
+            </div>
+            <button mat-raised-button type="button" class="w-full mt-6">
+                <div class="w-full flex flex-row gap-4 py-2">
+                    <img src="/assets/icons/auth-icon/gmail.svg" width="30" height="30" alt="gmail-icon" />
+                    <p class="text-slate-600">Sign in with Google</p>
+                </div>
+            </button>
+            <div class="text-sm text-center mt-8">
+                <p>
+                    Don't have an account?
+                    <a href="https://www.facebook.com/" class="underline text-sky-600">Sign up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

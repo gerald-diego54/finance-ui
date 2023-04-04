@@ -1,0 +1,211 @@
+<app-navbar></app-navbar>
+<div class="w-full hidden absolute top-24 z-10 md:block">
+    <p class="text-3xl text-white text-center z-10 font-medium relative">Register</p>
+    <p class="text-base my-2 text-white text-center z-10 font-normal relative">
+        Start your budgeting with Finance Chrome
+    </p>
+</div>
+<div class="max-w-3xl mx-auto">
+    <form class="md:px-10 z-10 mt-20 md:mt-0 mx-3 min-w-[270px] md:mx-0">
+        <div class="text-center font-medium text-2xl text-bice-blue md:block">Sign up</div>
+        <div class="text-justify text-sm my-2 text-bice-blue"></div>
+        <button mat-raised-button type="button" class="w-full mt-6">
+            <div class="w-full flex flex-row gap-4 py-2">
+                <img src="/assets/icons/auth-icon/gmail.svg" width="30" height="30" alt="gmail-icon" />
+                <p class="text-slate-600">Sign up with Google</p>
+            </div>
+        </button>
+        <div class="relative flex py-5 items-center">
+            <div class="flex-grow border-t border-gray-400"></div>
+            <span class="flex-shrink mx-4 text-gray-400 text-sm">OR</span>
+            <div class="flex-grow border-t border-gray-400"></div>
+        </div>
+        <mat-stepper *ngIf="mobile; else notMobile" labelPosition="bottom" #stepper>
+            <mat-step label="Email">
+                <mat-form-field class="w-full">
+                    <mat-label class="text-bice-blue">Email</mat-label>
+                    <input class="text-sm" type="email" matInput />
+                </mat-form-field>
+                <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>Next</button>
+            </mat-step>
+            <mat-step label="Username">
+                <mat-form-field class="w-full">
+                    <mat-label class="text-bice-blue">Username</mat-label>
+                    <input class="text-sm" type="text" matInput />
+                </mat-form-field>
+                <div class="flex flex-row gap-2 mt-4">
+                    <button
+                        type="button"
+                        class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                        matStepperPrevious
+                    >
+                        Back
+                    </button>
+                    <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                        Next
+                    </button>
+                </div>
+            </mat-step>
+            <mat-step label="Full Name">
+                <mat-form-field class="w-full">
+                    <mat-label class="text-bice-blue">Firstname</mat-label>
+                    <input class="text-sm" type="text" matInput />
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                    <mat-label class="text-bice-blue">Lastname</mat-label>
+                    <input class="text-sm" type="text" matInput />
+                </mat-form-field>
+                <div class="flex flex-row gap-2">
+                    <button
+                        type="button"
+                        class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                        matStepperPrevious
+                    >
+                        Back
+                    </button>
+                    <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                        Next
+                    </button>
+                </div>
+            </mat-step>
+            <mat-step label="Password">
+                <mat-form-field class="w-full">
+                    <mat-label class="text-bice-blue">Password</mat-label>
+                    <input class="text-sm" type="password" matInput />
+                </mat-form-field>
+                <mat-form-field class="w-full">
+                    <mat-label class="text-bice-blue">Confirm Password</mat-label>
+                    <input class="text-sm" type="password" matInput />
+                </mat-form-field>
+                <div class="flex flex-row gap-2">
+                    <button
+                        type="button"
+                        class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                        matStepperPrevious
+                    >
+                        Back
+                    </button>
+                    <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                        Next
+                    </button>
+                </div>
+            </mat-step>
+            <mat-step label="Terms and Agreements">
+                <mat-checkbox class="text-sm"
+                    >By signing up, you agree to our Terms , Privacy Policy and Cookies Policy .</mat-checkbox
+                ><br />
+                <div class="flex flex-row gap-2 mt-4">
+                    <button
+                        type="button"
+                        class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                        matStepperPrevious
+                    >
+                        Back
+                    </button>
+                    <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                        Register
+                    </button>
+                </div>
+            </mat-step>
+        </mat-stepper>
+        <ng-template #notMobile>
+            <mat-stepper labelPosition="bottom" orientation="vertical" #stepper>
+                <mat-step label="Email">
+                    <mat-form-field class="w-full">
+                        <mat-label class="text-bice-blue">Email</mat-label>
+                        <input class="text-sm" type="email" matInput />
+                    </mat-form-field>
+                    <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                        Next
+                    </button>
+                </mat-step>
+                <mat-step label="Username">
+                    <mat-form-field class="w-full">
+                        <mat-label class="text-bice-blue">Username</mat-label>
+                        <input class="text-sm" type="text" matInput />
+                    </mat-form-field>
+                    <div class="flex flex-row gap-2 mt-4">
+                        <button
+                            type="button"
+                            class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                            matStepperPrevious
+                        >
+                            Back
+                        </button>
+                        <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                            Next
+                        </button>
+                    </div>
+                </mat-step>
+                <mat-step label="Full Name">
+                    <mat-form-field class="w-full">
+                        <mat-label class="text-bice-blue">Firstname</mat-label>
+                        <input class="text-sm" type="text" matInput />
+                    </mat-form-field>
+                    <mat-form-field class="w-full">
+                        <mat-label class="text-bice-blue">Lastname</mat-label>
+                        <input class="text-sm" type="text" matInput />
+                    </mat-form-field>
+                    <div class="flex flex-row gap-2">
+                        <button
+                            type="button"
+                            class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                            matStepperPrevious
+                        >
+                            Back
+                        </button>
+                        <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                            Next
+                        </button>
+                    </div>
+                </mat-step>
+                <mat-step label="Password">
+                    <mat-form-field class="w-full">
+                        <mat-label class="text-bice-blue">Password</mat-label>
+                        <input class="text-sm" type="password" matInput />
+                    </mat-form-field>
+                    <mat-form-field class="w-full">
+                        <mat-label class="text-bice-blue">Confirm Password</mat-label>
+                        <input class="text-sm" type="password" matInput />
+                    </mat-form-field>
+                    <div class="flex flex-row gap-2">
+                        <button
+                            type="button"
+                            class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                            matStepperPrevious
+                        >
+                            Back
+                        </button>
+                        <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                            Next
+                        </button>
+                    </div>
+                </mat-step>
+                <mat-step label="Terms and Agreements">
+                    <mat-checkbox class="text-sm"
+                        >By signing up, you agree to our Terms , Privacy Policy and Cookies Policy .</mat-checkbox
+                    ><br />
+                    <div class="flex flex-row gap-2 mt-4">
+                        <button
+                            type="button"
+                            class="border border-bice-blue text-bice-blue rounded-md px-3 py-2"
+                            matStepperPrevious
+                        >
+                            Back
+                        </button>
+                        <button type="button" class="bg-bice-blue text-white rounded-md px-3 py-2" matStepperNext>
+                            Register
+                        </button>
+                    </div>
+                </mat-step>
+            </mat-stepper>
+        </ng-template>
+
+        <div class="text-sm text-sky-950 text-center mt-8 border shadow-md rounded-md py-4">
+            <p>
+                Have an account?
+                <a href="https://www.facebook.com/" class="underline text-sky-600">Sign in</a>
+            </p>
+        </div>
+    </form>
+</div>

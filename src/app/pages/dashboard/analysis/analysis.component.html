@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<div class="flex flex-row h-[91%]">
+    <app-sidebar></app-sidebar>
+    <div class="w-fit">
+        <div class="flex flex-col">
+            <div class="ml-16 mt-5 text-3xl text-bice-blue font-medium">Reports</div>
+            <ol class="flex items-center space-x-2 ml-16 text-gray-500 text-sm my-3">
+                <li><a href="/" class="text-bice-blue">Home</a></li>
+                <li>/</li>
+                <li><a href="/products" class="text-bice-blue font-medium">Analysis</a></li>
+            </ol>
+            <div class="flex flex-row">
+                <div>
+                    <div class="w-96 ml-16 mt-7">
+                        <div class="text-bice-blue font-medium -ml-10 text-lg text-center uppercase">
+                            Monthly Budget
+                        </div>
+                        <div class="flex flex-row h-64 mt-10">
+                            <div class="border-r-2 w-fit border-dashed border-slate-400">
+                                <div class="relative h-44 flex items-center">
+                                    <mat-progress-bar
+                                        mode="determinate"
+                                        class="transform relative -right-9 -rotate-90"
+                                        value="50"
+                                    ></mat-progress-bar>
+                                </div>
+                                <div class="uppercase text-left ml-4 text-base text-bice-blue font-medium">
+                                    Start Balance
+                                </div>
+                                <div class="uppercase text-right mr-8 text-sm text-bice-blue font-normal">₱ 12,000</div>
+                            </div>
+                            <div>
+                                <div class="relative h-44 flex items-center">
+                                    <mat-progress-bar
+                                        mode="determinate"
+                                        class="transform details relative -left-8 -rotate-90"
+                                        value="70"
+                                        color="warn"
+                                    ></mat-progress-bar>
+                                </div>
+                                <div class="uppercase text-left ml-9 text-base text-orange-600 font-medium">
+                                    End Balance
+                                </div>
+                                <div class="uppercase text-left ml-9 text-sm text-orange-600 font-normal">₱ 12,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 mt-7 border px-5 py-3">
+                        <div class="uppercase text-bice-blue font-medium text-lg text-center -ml-10">
+                            Expenses and Income
+                        </div>
+                        <div class="relative flex flex-row gap-3">
+                            <div class="flex flex-col gap-3 my-3">
+                                <div class="text-sm font-normal text-bice-blue">
+                                    Actual Expenses <span>₱ 12,000</span>
+                                </div>
+                                <div class="text-sm font-normal text-bice-blue">
+                                    Planned Expenses <span>₱ 12,000</span>
+                                </div>
+                                <div class="text-sm font-normal text-bice-blue">
+                                    Actual Income <span>₱ 12,000</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3 mt-3">
+                                <mat-progress-bar
+                                    mode="determinate"
+                                    value="70"
+                                    class="my-auto"
+                                    color="accent"
+                                ></mat-progress-bar>
+                                <mat-progress-bar
+                                    mode="determinate"
+                                    value="70"
+                                    class="my-auto"
+                                    color="accent"
+                                ></mat-progress-bar>
+                                <mat-progress-bar
+                                    mode="determinate"
+                                    value="70"
+                                    class="my-auto"
+                                    color="accent"
+                                ></mat-progress-bar>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
